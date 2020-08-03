@@ -30,6 +30,7 @@ def can_be_created_in_a_block(args = {tile: "Home Alone", release_date: "1990"})
 
   Movie.create do |m|
     m.title = "The Room"
+    m.release_date = "2003"
   end
 end
 
@@ -69,7 +70,7 @@ def can_be_found_updated_and_saved
   # Updtate the title "Awesome Flick" to "Even Awesomer Flick", save it, then return it
   Movie.create(title: "Awesome Flick")
   Movie.update(title: "Even Awesomer Flick")
-  movie.save
+  Movie.save
 end
 
 def can_update_using_update_method
